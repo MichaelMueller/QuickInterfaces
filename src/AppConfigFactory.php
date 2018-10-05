@@ -15,5 +15,4 @@ interface AppConfigFactory
    */
   function create();
 
-
 }

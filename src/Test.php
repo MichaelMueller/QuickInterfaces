@@ -6,8 +6,14 @@ namespace Qck\Interfaces;
  * A interface for a test
  * @author muellerm
  */
-interface Test extends ServicedFunctor
+interface Test
 {
+/**
+ * 
+ * @param \Qck\Interfaces\FileSystem $FileSystem
+ * @param \Qck\Interfaces\Cleaner $Cleaner
+ */
+  function exec( FileSystem $FileSystem, Cleaner $Cleaner );
 
   /**
    * @return string[] A set of test Fqcns that must be run before
