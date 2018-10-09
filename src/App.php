@@ -10,5 +10,5 @@ namespace Qck\Interfaces;
 interface App
 {
 
-  function run( AppConfig $AppConfig );
+  function run( $AppConfig );
 }

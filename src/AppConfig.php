@@ -7,7 +7,7 @@ namespace Qck\Interfaces;
  * 
  * @author muellerm
  */
-interface AppConfig
+interface AppConfig extends HostNameProvider
 {
 
   /**
@@ -16,8 +16,27 @@ interface AppConfig
   function getAppName();
 
   /**
-   * @return string
+   * @return Request
    */
-  function getWorkingDir( $createIfNotExists = true );
+  function getRequest();
 
+  /**
+   * @return Router
+   */
+  function getRouter();
+
+  /**
+   * @return ControllerFactory
+   */
+  function getControllerFactory();
+
+  /**
+   * @return Mail\AdminMailer
+   */
+  function getAdminMailer();
+
+  /**
+   * @return ErrorController
+   */
+  function getErrorController();
 }

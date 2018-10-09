@@ -7,7 +7,7 @@ namespace Qck\Interfaces;
  * 
  * @author muellerm
  */
-interface Env
+interface HostNameProvider
 {
 
   /**

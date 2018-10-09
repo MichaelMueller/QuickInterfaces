@@ -11,6 +11,11 @@ interface User
 {
 
   /**
+   * @return string or null if none is set
+   */
+  function getId();
+
+  /**
    * 
    * @param string $Route
    * @return bool

@@ -7,11 +7,11 @@ namespace Qck\Interfaces;
  * 
  * @author muellerm
  */
-interface AppConfigFactory
+interface AppFactory
 {
 
   /**
-   * @return AppConfig
+   * @return App
    */
   function create();
 

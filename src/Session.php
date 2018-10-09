@@ -13,5 +13,5 @@ interface Session
   /**
    * @return string or null if none is set
    */
-  function getUserName();
+  function getUserId();
 }
