@@ -12,5 +12,5 @@ interface Functor
   /**
    * @return void
    */
-  public function exec();
+  public function run();
 }
