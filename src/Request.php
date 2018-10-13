@@ -3,7 +3,8 @@
 namespace Qck\Interfaces;
 
 /**
- * Service Class for the current Request
+ * Encapsulation of everything that is known when a request is sent to this system (input
+ * variables, env, client and config infos)
  * @author muellerm
  */
 interface Request
@@ -23,7 +24,7 @@ interface Request
    * @return bool
    */
   public function has( $Name );
-  
+
   /**
    * 
    * @return array
@@ -33,20 +34,20 @@ interface Request
   /**
    * @return bool
    */
-  function isCli();
+  function wasRunFromCommandLine();
 
   /**
-   * @return string the user agent
+   * @return Client
    */
-  function getUserAgent();
+  function getClient();
 
   /**
-   * @return bool whether the browser signature is known or not
+   * @return Env
    */
-  function isKnownUserAgent();
+  function getEnv();
 
   /**
-   * @return string an IPv4, IPv6 address or false if no ip could be found
+   * @return Config
    */
-  function getIp();
+  function getConfig();
 }

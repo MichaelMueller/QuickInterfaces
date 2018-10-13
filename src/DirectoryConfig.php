@@ -13,7 +13,13 @@ interface DirectoryConfig extends LocalDataDirProvider
   /**
    * @return string
    */
+  function getBaseDir();
+
+  /**
+   * @return string
+   */
   function getDataDir( $createIfNotExists = true );
+
 
   /**
    * @return string

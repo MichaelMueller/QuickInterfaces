@@ -7,12 +7,11 @@ namespace Qck\Interfaces;
  * 
  * @author muellerm
  */
-interface AppFactory
+interface Env
 {
 
   /**
-   * @return App
+   * @return string
    */
-  function create();
-
+  function getHostName();
 }

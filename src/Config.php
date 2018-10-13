@@ -7,7 +7,7 @@ namespace Qck\Interfaces;
  * 
  * @author muellerm
  */
-interface AppConfig extends HostNameProvider
+interface Config
 {
 
   /**
@@ -16,12 +16,7 @@ interface AppConfig extends HostNameProvider
   function getAppName();
 
   /**
-   * @return Request
-   */
-  function getRequest();
-
-  /**
-   * @return Router
+   * @return Router or null
    */
   function getRouter();
 
@@ -39,4 +34,9 @@ interface AppConfig extends HostNameProvider
    * @return ErrorController
    */
   function getErrorController();
+
+  /**
+   * @return Env
+   */
+  function getEnv();
 }
