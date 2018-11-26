@@ -7,8 +7,7 @@ namespace Qck\Interfaces;
  * 
  * @author muellerm
  */
-interface DirectoryConfig extends LocalDataDirProvider
-{
+interface DirectoryConfig extends LocalDataDirProvider {
 
   /**
    * @return string
@@ -18,21 +17,15 @@ interface DirectoryConfig extends LocalDataDirProvider
   /**
    * @return string
    */
-  function getDataDir( $createIfNotExists = true );
-
-
-  /**
-   * @return string
-   */
-  function getLocalDataDir( $createIfNotExists = true );
+  function getDataDir($createIfNotExists = true);
 
   /**
    * @return string
    */
-  function getTmpDir( $createIfNotExists = true );
+  function getLocalDataDir($createIfNotExists = true);
 
   /**
    * @return string
    */
-  function getTmpSubDir( $DirName, $createIfNotExists = true );
+  function getTmpDir($createIfNotExists = true);
 }
