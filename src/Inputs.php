@@ -16,23 +16,18 @@ interface Inputs
    * @param mixed $Default
    * @return mixed
    */
-  public function get($Name, $Default = null);
+  public function get( $Name, $Default = null );
 
   /**
    * 
    * @param string $Name
    * @return bool
    */
-  public function has($Name);
+  public function has( $Name );
 
   /**
    * 
    * @return array
    */
   public function getParams();
-
-  /**
-   * @return bool
-   */
-  function wasRunFromCommandLine();
 }

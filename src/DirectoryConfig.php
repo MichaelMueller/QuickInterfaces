@@ -9,9 +9,6 @@ namespace Qck\Interfaces;
  */
 interface DirectoryConfig 
 {
-  const WORKING_DIR = "var";
-  const DATA_SUBDIR = "data";
-  
   /**
    * @return string
    */

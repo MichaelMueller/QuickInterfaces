@@ -44,4 +44,15 @@ interface App
    * @return \Qck\Inputs
    */
   function getInputs();
+
+  /**
+   * @return DirectoryConfig
+   */
+  function getDirectoryConfig();
+
+  /**
+   * 
+   * @param \Qck\Interfaces\DirectoryConfig $DirectoryConfig
+   */
+  function setDirectoryConfig( DirectoryConfig $DirectoryConfig );
 }
