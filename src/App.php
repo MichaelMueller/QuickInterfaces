@@ -16,7 +16,7 @@ interface App
   function getAppName();
 
   /**
-   * @return Router or null
+   * @return Router
    */
   function getRouter();
 
@@ -36,12 +36,12 @@ interface App
   function getErrorController();
 
   /**
-   * @return Env
+   * @return string
    */
   function getHostName();
 
   /**
-   * @return \Qck\Request
+   * @return \Qck\Inputs
    */
-  function getRequest();
+  function getInputs();
 }
