@@ -7,7 +7,7 @@ namespace Qck\Interfaces;
  * 
  * @author muellerm
  */
-interface AppConfig
+interface App
 {
 
   /**
@@ -38,12 +38,8 @@ interface AppConfig
   /**
    * @return Env
    */
-  function getEnv();
+  function getHostName();
 
-  /**
-   * @return string the name identifying this web app
-   */
-  function getDirectoryConfig();
   /**
    * @return \Qck\Request
    */

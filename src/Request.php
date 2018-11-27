@@ -7,7 +7,7 @@ namespace Qck\Interfaces;
  * variables, env, client and config infos)
  * @author muellerm
  */
-interface Request
+interface Inputs
 {
 
   /**
@@ -16,14 +16,14 @@ interface Request
    * @param mixed $Default
    * @return mixed
    */
-  public function get( $Name, $Default = null );
+  public function get($Name, $Default = null);
 
   /**
    * 
    * @param string $Name
    * @return bool
    */
-  public function has( $Name );
+  public function has($Name);
 
   /**
    * 
@@ -35,19 +35,4 @@ interface Request
    * @return bool
    */
   function wasRunFromCommandLine();
-
-  /**
-   * @return Client
-   */
-  function getClient();
-
-  /**
-   * @return Env
-   */
-  function getEnv();
-
-  /**
-   * @return Config
-   */
-  function getConfig();
 }

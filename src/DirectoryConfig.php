@@ -7,8 +7,11 @@ namespace Qck\Interfaces;
  * 
  * @author muellerm
  */
-interface DirectoryConfig extends LocalDataDirProvider {
-
+interface DirectoryConfig 
+{
+  const WORKING_DIR = "var";
+  const DATA_SUBDIR = "data";
+  
   /**
    * @return string
    */
@@ -18,11 +21,6 @@ interface DirectoryConfig extends LocalDataDirProvider {
    * @return string
    */
   function getDataDir($createIfNotExists = true);
-
-  /**
-   * @return string
-   */
-  function getLocalDataDir($createIfNotExists = true);
 
   /**
    * @return string

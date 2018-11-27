@@ -13,5 +13,5 @@ interface Controller
   /**
    * @return Response
    */
-  public function handle( \Qck\Request $Request );
+  public function run(App $App);
 }

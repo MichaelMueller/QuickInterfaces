@@ -12,7 +12,7 @@ interface SubController extends Controller
 
   /**
    * 
-   * @param \Qck\FrontController $FrontController
+   * @param \Qck\App $FrontController
    */
-  public function setFrontController( \Qck\FrontController $FrontController );
+  public function setFrontController( \Qck\App $FrontController );
 }
