@@ -7,8 +7,9 @@ namespace Qck\Interfaces;
  * 
  * @author muellerm
  */
-interface DirectoryConfig 
+interface DirectoryConfig
 {
+
   /**
    * @return string
    */
@@ -17,10 +18,15 @@ interface DirectoryConfig
   /**
    * @return string
    */
-  function getDataDir($createIfNotExists = true);
+  function getDataDir( $createIfNotExists = true );
 
   /**
    * @return string
    */
-  function getTmpDir($createIfNotExists = true);
+  function getTmpDir( $createIfNotExists = true );
+
+  /**
+   * @return void
+   */
+  function createDirIfNotExists( $Dir );
 }
