@@ -9,9 +9,9 @@ namespace Qck\Interfaces;
  */
 interface LanguageProvider
 {
-
+  
   /**
    * @return string
    */
-  public function get();
+  public function getLanguage();
 }
