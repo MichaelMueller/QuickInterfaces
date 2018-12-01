@@ -7,11 +7,7 @@ namespace Qck\Interfaces;
  * Basic and simple interface for a controller
  * @author muellerm
  */
-interface Controller
+interface Controller extends Functor
 {
 
-  /**
-   * @return Response
-   */
-  public function run(App $App);
 }

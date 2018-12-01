@@ -46,6 +46,11 @@ interface App
   function getInputs();
 
   /**
+   * @return bool
+   */
+  function wasInvokedFromCli();
+
+  /**
    * @return DirectoryConfig
    */
   function getDirectoryConfig();
