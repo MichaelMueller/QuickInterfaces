@@ -17,6 +17,13 @@ interface FileSystem
   function getAllFiles( $Dir, $Recursive = true );
 
   /**
+   * Get all directories (and possibly subdirectories) in dir
+   * @param string $Dir
+   * @param bool $Recursive
+   */
+  function getDirectories( $Dir, $Recursive = true );
+
+  /**
    * Get specific Files based on the Extension
    * @param string $Dir
    * @param string[] $Extensions a set of extensions. Please DO NOT INCLUDE THE DOT, e.g. ["jpg", "jpeg", "png"] etc.
