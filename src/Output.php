@@ -6,7 +6,7 @@ namespace Qck\Interfaces;
  *
  * @author muellerm
  */
-interface Output
+interface Output extends Template
 {
 
   // CONSTANTS
@@ -35,8 +35,4 @@ interface Output
    */
   public function getAdditionalHeaders();
   
-  /**
-   * @return string
-   */
-  public function render();
 }
