@@ -33,7 +33,7 @@ interface FileSystem
   function getDirectories( $Dir, $Recursive = true );
 
   /**
-   * Get all directories (and possibly subdirectories) in dir
+   * list directory contents
    * @param string $Dir
    * @param int $ListType, 0 = show files and directories, 1 = only files, 2 = only dirs
    */
