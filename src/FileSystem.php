@@ -15,6 +15,15 @@ interface FileSystem
    * @param bool $Recursive
    */
   function getAllFiles( $Dir, $Recursive = true );
+  
+  /**
+   * 
+   * @param string $Dir
+   * @param string $HashValue
+   * @param string $Function
+   * @return string Full path of a matching file or null
+   */
+  function findMatchingHashedName( $Dir, $Recursive = true, $HashValue, $Function="md5" );
 
   /**
    * Get all directories (and possibly subdirectories) in dir
@@ -22,6 +31,13 @@ interface FileSystem
    * @param bool $Recursive
    */
   function getDirectories( $Dir, $Recursive = true );
+
+  /**
+   * Get all directories (and possibly subdirectories) in dir
+   * @param string $Dir
+   * @param int $ListType, 0 = show files and directories, 1 = only files, 2 = only dirs
+   */
+  function ls( $Dir, $ListType=0 );
 
   /**
    * Get specific Files based on the Extension
