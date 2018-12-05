@@ -15,4 +15,13 @@ interface User
    */
   function getName();
 
+  /**
+   * @return string
+   */
+  function getHashedPassword();
+
+  /**
+   * @return Authenticator An Authenticator or null if no custom authenticator is used
+   */
+  function getAuthenticator();
 }

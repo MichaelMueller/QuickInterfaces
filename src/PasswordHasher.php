@@ -6,7 +6,7 @@ namespace Qck\Interfaces;
  *
  * @author muellerm
  */
-class PasswordHasher
+interface PasswordHasher
 {
 
   function verify($PlainTextPassword, $HashedPassword);
