@@ -28,5 +28,5 @@ interface Response
   /**
    * send the response
    */
-  function send( App $App );
+  function send( AppConfig $App );
 }

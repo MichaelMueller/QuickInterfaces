@@ -7,7 +7,7 @@ namespace Qck\Interfaces;
  * 
  * @author muellerm
  */
-interface App
+interface AppConfig
 {
 
   /**
@@ -19,11 +19,6 @@ interface App
    * @return Router
    */
   function getRouter();
-
-  /**
-   * @return ControllerFactory
-   */
-  function getControllerFactory();
 
   /**
    * @return Mail\AdminMailer
@@ -53,11 +48,22 @@ interface App
   /**
    * @return DirectoryConfig
    */
+  function showErrors();
+
+  /**
+   * @return DirectoryConfig
+   */
   function getDirectoryConfig();
 
   /**
    * 
    * @param \Qck\Interfaces\DirectoryConfig $DirectoryConfig
    */
-  function setDirectoryConfig( DirectoryConfig $DirectoryConfig );
+  function setDirectoryConfig(DirectoryConfig $DirectoryConfig);
+
+  /**
+   * 
+   * @param string $Hostname
+   */
+  function setHostName($Hostname);
 }

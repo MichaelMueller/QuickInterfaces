@@ -10,5 +10,5 @@ namespace Qck\Interfaces;
 interface Controller
 {
 
-  function run(App $App);
+  function run(AppConfig $App);
 }

@@ -16,17 +16,22 @@ interface Router
   public function getCurrentRoute();
 
   /**
+   * @return Controller or null
+   */
+  public function getCurrentController();
+
+  /**
    * 
    * @param string $Route
    * @param array $args
    * @return string A valid Link conformant to this factory
    */
-  public function getLink( $Route, $args = array () );
+  public function getLink($Route, $args = array());
 
   /**
    * Will immediately redirect to another Page
    * @param string $Route
    * @param array $args
    */
-  public function redirect( $Route, $args = array () );
+  public function redirect($Route, $args = array());
 }
