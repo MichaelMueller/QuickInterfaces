@@ -10,8 +10,22 @@ namespace Qck\Interfaces;
 interface Session
 {
 
+  const ANONYMOUS_USER = "anonymous";
+
   /**
+   * start session and return a username if set
    * @return string or null if none is set
    */
-  function getUserId();
+  function getUsername();
+
+  /**
+   * start session and set a username if set
+   * @return string or null if none is set
+   */
+  function setUsername($Username);
+
+  /**
+   * completely clear session
+   */
+  function destroySession();
 }

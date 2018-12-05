@@ -13,12 +13,6 @@ interface User
   /**
    * @return string or null if none is set
    */
-  function getId();
+  function getName();
 
-  /**
-   * 
-   * @param string $Route
-   * @return bool
-   */
-  function hasPermissionFor( $Route );
 }
