@@ -9,9 +9,24 @@ namespace Qck\Interfaces;
  */
 interface Node
 {
-  
+
   /**
-   * @return string
+   * @return array
    */
-  public function getUuid();
+  function getData();
+
+  /**
+   * @return array
+   */
+  function setData(array $Data);
+
+  /**
+   * @return array
+   */
+  function hasChanged();
+
+  /**
+   * @return array
+   */
+  function setUnchanged();
 }
