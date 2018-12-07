@@ -30,6 +30,11 @@ interface File
   function getPath();
 
   /**
+   * @return string the file's path
+   */
+  function getParentDir();
+
+  /**
    * @return bool if this is a dir
    */
   function isDir();
@@ -46,5 +51,5 @@ interface File
    * @param string $filePath
    * @param string $data
    */
-  function writeContents( $data );
+  function writeContents($data);
 }

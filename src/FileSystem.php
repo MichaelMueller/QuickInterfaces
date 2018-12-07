@@ -9,6 +9,18 @@ namespace Qck\Interfaces;
 interface FileSystem
 {
 
+  // constants for getFiles
+  const FILES_AND_DIRECTORIES = 0;
+  const ONLY_FILES            = 1;
+  const ONLY_DIRECTORIES      = 2;
+
+  /**
+   * 
+   * @param type $BasePath
+   * @param type $FileName
+   */
+  function join($BasePath, $FileName);
+  
   /**
    * 
    * @param string $Dir
@@ -18,20 +30,20 @@ interface FileSystem
    * @param mixed $Extensions array or string or null of file extensions without dot. has no effect if mode is 2
    * @return File[] File array
    */
-  function getFiles( $Dir, $Mode = 0, $Recursive = true, $Extensions = null );
+  function getFiles($Dir, $Mode = FileSystem ::FILES_AND_DIRECTORIES, $Recursive = true, $Extensions = null);
 
   /**
    * Get the size of a folder and all containing files (recursively)
    * @param string $dir
    */
-  function getFolderSize( $Dir );
+  function getFolderSize($Dir);
 
   /**
    * Creates a directory if it not exists (recursively). If it exists nothing will happen. 
    * @param string $Path relative or absolute path
    * @param bool $DeleteIfExists whether to delete the Dir if it exists and create it afterwards
    */
-  function createDir( $Path, $DeleteIfExists = false );
+  function createDir($Path, $DeleteIfExists = false);
 
   /**
    * Creates an empty random file.
@@ -40,7 +52,7 @@ interface FileSystem
    * @param string $Dir if null the sys temp dir will be used. If $Dir does not exist it will be created
    * @return string The File Path
    */
-  function createRandomFile( $NamePrefix = null, $Ext = null, $Dir = null );
+  function createRandomFile($NamePrefix = null, $Ext = null, $Dir = null);
 
   /**
    * Creates a a named file
@@ -49,20 +61,20 @@ interface FileSystem
    * @param bool $DeleteIfExists whether to delete the file if it exists and create it afterwards
    * @return string the file name 
    */
-  function createFile( $Name, $Dir = null, $DeleteIfExists = false );
+  function createFile($Name, $Dir = null, $DeleteIfExists = false);
 
   /**
    * Removes the file or the complete folder (RECURSIVELY!)
    * @param string $path
    * @return bool false if the path not existed, true otherwise
    */
-  function delete( $path );
+  function delete($path);
 
   /**
    * Delete everything in the folder but not the folder itself
    * @param string $path
    */
-  function clearFolder( $path );
+  function clearFolder($path);
 
   /**
    * Will move a file or folder to another location
@@ -70,7 +82,7 @@ interface FileSystem
    * @param string $NewPath - if the containing folder does not exist it will be created
    * @return bool false if the path not existed, true otherwise
    */
-  function move( $Path, $NewPath );
+  function move($Path, $NewPath);
 
   /**
    * will copy a file or folder to another locations
@@ -78,5 +90,12 @@ interface FileSystem
    * @param string $NewPath - if the containing folder does not exist it will be created
    * @return bool false if the path not existed, true otherwise
    */
-  function copy( $Path, $NewPath );
+  function copy($Path, $NewPath);
+
+  /**
+   * writes to file assures parent directory is created
+   * @param string $FilePath
+   * @param string $Data
+   */
+  function writeToFile($FilePath, $Data);
 }
