@@ -18,7 +18,7 @@ interface FileSystem
    * @param mixed $Extensions array or string or null of file extensions without dot. has no effect if mode is 2
    * @return File[] File array
    */
-  function getFiles( $Dir, $Mode = 0, $Recursive = true, $Extensions = [] );
+  function getFiles( $Dir, $Mode = 0, $Recursive = true, $Extensions = null );
 
   /**
    * Get the size of a folder and all containing files (recursively)

@@ -15,5 +15,5 @@ interface FileFactory
    * @param string $FileName
    * @return File A File Object
    */
-  function create( $DirPath, $FileName );
+  function createFile( $DirPath, $FileName );
 }
