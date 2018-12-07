@@ -30,6 +30,11 @@ interface File
   function getPath();
 
   /**
+   * @return int the size of the file
+   */
+  function getSize();
+
+  /**
    * @return string the file's path
    */
   function getParentDir();
