@@ -10,55 +10,21 @@ interface FileSystem
 {
 
   /**
-   * Get all Files (and subdirectories) in dir
-   * @param string $Dir
-   * @param bool $Recursive
-   */
-  function getAllFiles( $Dir, $Recursive = true );
-  
-  /**
    * 
    * @param string $Dir
-   * @param string $HashValue
-   * @param string $Function
-   * @return string Full path of a matching file or null
-   */
-  function findMatchingHashedName( $Dir, $Recursive = true, $HashValue, $Function="md5" );
-
-  /**
-   * Get all directories (and possibly subdirectories) in dir
-   * @param string $Dir
+   * @param \Qck\Interfaces\FileFactory $FileFactory
+   * @param int $Mode: 0 means files and folders, 1=only files, 2=only dirs
    * @param bool $Recursive
+   * @param mixed $Extensions array or string or null of file extensions without dot. has no effect if mode is 2
+   * @return File[] File array
    */
-  function getDirectories( $Dir, $Recursive = true );
-
-  /**
-   * list directory contents
-   * @param string $Dir
-   * @param int $ListType, 0 = show files and directories, 1 = only files, 2 = only dirs
-   */
-  function ls( $Dir, $ListType=0 );
-
-  /**
-   * Get specific Files based on the Extension
-   * @param string $Dir
-   * @param string[] $Extensions a set of extensions. Please DO NOT INCLUDE THE DOT, e.g. ["jpg", "jpeg", "png"] etc.
-   * @param bool $Recursive
-   */
-  function getFiles( $Dir, $Extensions, $Recursive = true );
+  function getFiles( $Dir, $Mode = 0, $Recursive = true, $Extensions = [] );
 
   /**
    * Get the size of a folder and all containing files (recursively)
    * @param string $dir
    */
   function getFolderSize( $Dir );
-
-  /**
-   * Get the contents of a file using file locking
-   * @param string $FilePath
-   * @return string the data contained or null if file does not exist
-   */
-  function getContents( $FilePath );
 
   /**
    * Creates a directory if it not exists (recursively). If it exists nothing will happen. 
@@ -84,13 +50,6 @@ interface FileSystem
    * @return string the file name 
    */
   function createFile( $Name, $Dir = null, $DeleteIfExists = false );
-
-  /**
-   * Writes data to a file (overwrite or create) with an exclusive lock
-   * @param string $filePath
-   * @param string $data
-   */
-  function writeFile( $filePath, $data );
 
   /**
    * Removes the file or the complete folder (RECURSIVELY!)

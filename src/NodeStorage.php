@@ -13,5 +13,5 @@ interface NodeStorage
   /**
    * @return array
    */
-  function load($Uuid);
+  function load( $Uuid, $Fqcn = null );
 }
