@@ -9,6 +9,13 @@ namespace Qck\Interfaces;
 interface Client
 {
 
+  const BROWSER_UNKNOWN = 0;
+  const BROWSER_KNOWN   = 1;
+  const BROWSER_IE      = 2;
+  const BROWSER_FIREFOX = 3;
+  const BROWSER_CHROME  = 4;
+  const BROWSER_SAFARI  = 5;
+
   /**
    * @return string the user agent
    */
