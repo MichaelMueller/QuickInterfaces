@@ -28,5 +28,5 @@ interface Response
   /**
    * send the response
    */
-  function send( AppConfig $App );
+  function send( $CliUsed );
 }
