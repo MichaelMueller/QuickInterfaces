@@ -34,4 +34,11 @@ interface Router
    * @param array $args
    */
   public function redirect($Route, $args = array());
+  
+  /**
+   * Will immediately redirect to another Page (same as above but without building the URL)
+   * @param string $Route
+   * @param array $args
+   */
+  public function redirectToUrl($Url);
 }
