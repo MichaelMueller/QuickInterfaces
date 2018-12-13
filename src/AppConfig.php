@@ -31,11 +31,6 @@ interface AppConfig
   function getErrorController();
 
   /**
-   * @return string
-   */
-  function getHostName();
-
-  /**
    * @return \Qck\Inputs
    */
   function getInputs();
@@ -59,11 +54,5 @@ interface AppConfig
    * 
    * @param \Qck\Interfaces\DirectoryConfig $DirectoryConfig
    */
-  function setDirectoryConfig(DirectoryConfig $DirectoryConfig);
-
-  /**
-   * 
-   * @param string $Hostname
-   */
-  function setHostName($Hostname);
+  function setDirectoryConfig( DirectoryConfig $DirectoryConfig );
 }

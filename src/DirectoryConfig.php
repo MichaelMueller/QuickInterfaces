@@ -18,15 +18,25 @@ interface DirectoryConfig
   /**
    * @return string
    */
-  function getDataDir( $createIfNotExists = true );
+  function getDataDir( $Subdir = null, $createIfNotExists = true );
 
   /**
    * @return string
    */
-  function getTmpDir( $createIfNotExists = true );
+  function getLocalDataDir( $Subdir = null, $createIfNotExists = true );
 
   /**
-   * @return void
+   * @return string
    */
-  function createDirIfNotExists( $Dir );
+  function getHostName();
+
+  /**
+   * @return string
+   */
+  function getAssetsDir( $Subdir = null, $createIfNotExists = false );
+
+  /**
+   * @return string
+   */
+  function getTmpDir( $Subdir = null, $createIfNotExists = true );
 }

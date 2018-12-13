@@ -15,12 +15,12 @@ interface FileFactory
    * @param string $FileBaseName
    * @return File A File Object
    */
-  function createFile($DirPath, $FileBaseName);
+  function createFileObject($DirPath, $FileBaseName);
 
   /**
    * 
    * @param string $FilePath
    * @return File A File Object
    */
-  function createFileFromPath($FilePath);
+  function createFileObjectFromPath($FilePath);
 }
