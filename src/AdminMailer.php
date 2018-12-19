@@ -1,12 +1,12 @@
 <?php
 
-namespace Qck\Interfaces\Mail;
+namespace Qck\Interfaces;
 
 /**
  * Service class for sending messages to an admin
  * @author muellerm
  */
-interface AdminMailer extends \Qck\Interfaces\Service
+interface AdminMailer
 {
 
   /**

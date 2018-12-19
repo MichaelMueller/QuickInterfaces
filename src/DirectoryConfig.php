@@ -3,7 +3,7 @@
 namespace Qck\Interfaces;
 
 /**
- * An Config Service Class
+ * An interface providing important Project Directories
  * 
  * @author muellerm
  */
@@ -11,32 +11,36 @@ interface DirectoryConfig
 {
 
   /**
-   * @return string
+   * 
+   * @param string $SubFilePath
+   * @return The Project Dir with a sub file path
    */
-  function getBaseDir();
+  function getProjectDir( $SubFilePath = null );
 
   /**
-   * @return string
+   * 
+   * @param string $SubFilePath A path of a file within that dir
+   * @param string $createIfNotExists if true the file will be created if it does not exist
+   * @param string $IsDir If true a directory file will be created instead of a file
+   * @return string the Data Dir (appended with SubFilePath) 
    */
-  function getDataDir( $Subdir = null, $createIfNotExists = true );
+  function getDataDir( $SubFilePath = null, $createIfNotExists = true, $IsDir = true );
 
   /**
-   * @return string
+   * 
+   * @param string $SubFilePath A path of a file within that dir
+   * @param string $createIfNotExists if true the file will be created if it does not exist
+   * @param string $IsDir If true a directory file will be created instead of a file
+   * @return string the Data Dir (appended with SubFilePath) 
    */
-  function getLocalDataDir( $Subdir = null, $createIfNotExists = true );
+  function getLocalDataDir( $SubFilePath = null, $createIfNotExists = true, $IsDir = true );
 
   /**
-   * @return string
+   * 
+   * @param string $SubFilePath A path of a file within that dir
+   * @param string $createIfNotExists if true the file will be created if it does not exist
+   * @param string $IsDir If true a directory file will be created instead of a file
+   * @return string the Data Dir (appended with SubFilePath) 
    */
-  function getHostName();
-
-  /**
-   * @return string
-   */
-  function getAssetsDir( $Subdir = null, $createIfNotExists = false );
-
-  /**
-   * @return string
-   */
-  function getTmpDir( $Subdir = null, $createIfNotExists = true );
+  function getTmpDir( $SubFilePath = null, $createIfNotExists = true, $IsDir = true );
 }
