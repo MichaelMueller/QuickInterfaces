@@ -4,21 +4,26 @@ namespace Qck\Interfaces;
 
 /**
  *
- * Basic and simple interface for a controller
+ * Basic and simple interface for a DataNode
  * @author muellerm
  */
-interface Node
+interface DataNode
 {
 
   /**
-   * @return array
+   * @return string
+   */
+  function getUuid();
+
+  /**
+   * @return void
    */
   function getData();
 
   /**
    * @return array
    */
-  function setData(array $Data);
+  function setData( array $Data );
 
   /**
    * @return array
