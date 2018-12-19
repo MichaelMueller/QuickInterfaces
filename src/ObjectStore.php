@@ -11,9 +11,9 @@ interface ObjectStore
 {
 
   /**
-   * @return string
+   * @return PersistableObject
    */
-  function load($Id);
+  function load( $Uuid );
 
   /**
    * persist all changed objects

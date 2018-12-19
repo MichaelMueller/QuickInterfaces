@@ -7,16 +7,11 @@ namespace Qck\Interfaces;
  * Basic and simple interface for a DataNode
  * @author muellerm
  */
-interface PersistableObject
+interface PersistableObjectRoot extends PersistableObject
 {
 
   /**
    * @return void
    */
-  function getData();
-
-  /**
-   * @return array
-   */
-  function setData( array $Data );
+  function getId();
 }
