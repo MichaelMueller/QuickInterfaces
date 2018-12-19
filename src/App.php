@@ -14,4 +14,24 @@ interface App extends Functor
    * @return bool
    */
   function wasInvokedFromCli();
+
+  /**
+   * @return Inputs
+   */
+  function getInputs();
+
+  /**
+   * @return UserDb
+   */
+  function getUserDb();
+  
+  /**
+   * @return Session
+   */
+  function getSession();
+
+  /**
+   * @return array of method names
+   */
+  function getShellMethods();
 }

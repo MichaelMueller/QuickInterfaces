@@ -7,13 +7,8 @@ namespace Qck\Interfaces;
  * Basic and simple interface for a controller
  * @author muellerm
  */
-interface User
+interface User extends IdentifieableObject
 {
-
-  /**
-   * @return string or null if none is set
-   */
-  function getName();
 
   /**
    * @return string
