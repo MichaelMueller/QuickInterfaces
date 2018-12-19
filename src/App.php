@@ -11,11 +11,6 @@ interface App extends Functor
 {
 
   /**
-   * @return Inputs
-   */
-  function getInputs();
-
-  /**
    * @return bool
    */
   function wasInvokedFromCli();
