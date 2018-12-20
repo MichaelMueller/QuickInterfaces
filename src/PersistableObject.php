@@ -29,4 +29,14 @@ interface PersistableObject
    * @return array
    */
   function setUnchanged();
+
+  /**
+   * @return mixed
+   */
+  function getId();
+
+  /**
+   * @return void
+   */
+  function setId($Id);
 }
