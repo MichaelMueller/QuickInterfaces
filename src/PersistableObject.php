@@ -19,4 +19,14 @@ interface PersistableObject
    * @return array
    */
   function setData( array $Data );
+
+  /**
+   * @return array
+   */
+  function hasChanged();
+
+  /**
+   * @return array
+   */
+  function setUnchanged();
 }

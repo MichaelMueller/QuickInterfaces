@@ -28,9 +28,10 @@ interface FileSystem
    * @param int $Mode: 0 means files and folders, 1=only files, 2=only dirs
    * @param bool $Recursive
    * @param mixed $Extensions array or string or null of file extensions without dot. has no effect if mode is 2
+   * @param int $MaxFiles if not null, the function will stop after finding $MaxFiles
    * @return File[] File array
    */
-  function getFiles( $Dir, $Mode = FileSystem ::FILES_AND_DIRECTORIES, $Recursive = true, $Extensions = null );
+  function getFiles( $Dir, $Mode = FileSystem ::FILES_AND_DIRECTORIES, $Recursive = true, $Extensions = null, $MaxFiles = null );
 
   /**
    * @return FileFactory
@@ -51,11 +52,11 @@ interface FileSystem
   function createDir( $Path, $DeleteIfExists = false );
 
   /**
-   * Creates an empty random file.
+   * Creates an empty file with an arbitrary name.
    * @param string $NamePrefix
    * @param string $Ext
    * @param string $Dir if null the sys temp dir will be used. If $Dir does not exist it will be created
-   * @return string The File Path
+   * @return File
    */
   function createRandomFile( $NamePrefix = null, $Ext = null, $Dir = null );
 
@@ -64,7 +65,7 @@ interface FileSystem
    * @param string $Name
    * @param string $Dir if null the current working dir will be used. If $Dir does not exist it will be created
    * @param bool $DeleteIfExists whether to delete the file if it exists and create it afterwards
-   * @return string the file name 
+   * @return File
    */
   function createFile( $Name, $Dir = null, $DeleteIfExists = false );
 

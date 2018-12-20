@@ -11,9 +11,29 @@ interface ObjectStore
 {
 
   /**
-   * @return PersistableObject
+   * @return PersistableObject or null
    */
-  function load( $Uuid );
+  function create( $Fqcn, $Id = null );
+
+  /**
+   * @return PersistableObject or null
+   */
+  function get( $Fqcn, $Id );
+
+  /**
+   * @return bool
+   */
+  function exists( $Fqcn, $Id );
+
+  /**
+   * @return PersistableObject or null
+   */
+  function getFirst( $Fqcn );
+
+  /**
+   * @return int the number of stored objects of that kind
+   */
+  function count( $Fqcn );
 
   /**
    * persist all changed objects

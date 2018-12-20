@@ -19,11 +19,16 @@ interface App extends Functor
    * @return Inputs
    */
   function getInputs();
-  
+
   /**
    * @return Session
    */
   function getSession();
+
+  /**
+   * @return UserDb
+   */
+  function getUserDb();
 
   /**
    * @return array of method names
