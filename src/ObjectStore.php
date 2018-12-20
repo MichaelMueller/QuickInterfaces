@@ -18,12 +18,27 @@ interface ObjectStore
   /**
    * @return PersistableObject or null
    */
-  function get( $Fqcn, $Id );
+  function get( $Fqcn, $Id, $Create = false );
 
   /**
    * @return bool
    */
   function exists( $Fqcn, $Id );
+
+  /**
+   * @return bool
+   */
+  function getAll( $Fqcn );
+  
+  /**
+   * @return bool
+   */
+  function removeAll( $Fqcn );
+
+  /**
+   * @return bool
+   */
+  function remove( $Fqcn, $Id );
 
   /**
    * @return PersistableObject or null

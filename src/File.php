@@ -25,6 +25,11 @@ interface File
   function getFileName ();
 
   /**
+   * @return string the file name
+   */
+  function delete ();
+
+  /**
    * @return string the file's path
    */
   function getPath ();
