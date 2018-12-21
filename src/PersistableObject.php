@@ -11,18 +11,12 @@ interface PersistableObject
 {
 
   /**
-   * recursively save this object tree
-   * @return void
+   * 
    */
-  function save();
+  function setObjectStorage( ObjectStorage $ObjectStorage );
 
   /**
-   * 
+   * @return ObjectStorage
    */
-  function delete();
-  
-  /**
-   * 
-   */
-  function getId();
+  function getObjectStorage();
 }

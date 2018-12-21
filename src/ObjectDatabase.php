@@ -8,6 +8,9 @@ namespace Qck\Interfaces;
  */
 interface ObjectDatabase
 {
-  
+
+  /**
+   * @return ObjectStorage
+   */
   function getObjectStorage( $Fqcn, $Id = null );
 }

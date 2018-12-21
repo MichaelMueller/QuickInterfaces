@@ -11,20 +11,6 @@ interface ObjectStorage
 {
 
   /**
-   * set a scalar value
-   * @param string $Key
-   * @param mixed $Value
-   */
-  function setScalar( $Key, $Value );
-
-  /**
-   * 
-   * @param type $Key
-   * @param \Qck\Interfaces\PersistableObject $PersistableObject
-   */
-  function setObject( $Key, PersistableObject $PersistableObject );
-
-  /**
    * 
    * @param string $Key
    * @param mixed $DefaultValue
@@ -32,9 +18,23 @@ interface ObjectStorage
   function get( $Key, $DefaultValue );
 
   /**
+   * 
+   * @param type $Key
+   * @param type $Value
+   */
+  function setScalar( $Key, $Value );
+
+  /**
+   * 
+   * @param type $Key
+   * @param type $Value
+   */
+  function setObject( $Key, PersistableObject $PersistableObject, $WeakRef = false );
+
+  /**
    * persist changes
    */
-  function save();
+  function commit();
 
   /**
    * deletes the storage
@@ -42,7 +42,7 @@ interface ObjectStorage
   function delete();
 
   /**
-   * returns the id of this storage
+   * get 
    */
   function getId();
 }
