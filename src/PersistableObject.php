@@ -11,32 +11,18 @@ interface PersistableObject
 {
 
   /**
+   * recursively save this object tree
    * @return void
    */
-  function getData();
+  function save();
 
   /**
-   * @return array
+   * 
    */
-  function setData( array $Data );
-
+  function delete();
+  
   /**
-   * @return array
-   */
-  function hasChanged();
-
-  /**
-   * @return array
-   */
-  function setUnchanged();
-
-  /**
-   * @return mixed
+   * 
    */
   function getId();
-
-  /**
-   * @return void
-   */
-  function setId($Id);
 }
