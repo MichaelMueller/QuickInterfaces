@@ -4,7 +4,7 @@ namespace Qck\Interfaces;
 
 /**
  *
- * Basic and simple interface for a DataNode
+ * An interface for storing objects data persistently
  * @author muellerm
  */
 interface ObjectStorage
@@ -13,9 +13,8 @@ interface ObjectStorage
   /**
    * 
    * @param string $Key
-   * @param mixed $DefaultValue
    */
-  function get( $Key, $DefaultValue );
+  function get( $Key );
 
   /**
    * 
@@ -34,7 +33,7 @@ interface ObjectStorage
   /**
    * persist changes
    */
-  function commit();
+  function save();
 
   /**
    * deletes the storage
