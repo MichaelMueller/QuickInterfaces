@@ -9,23 +9,11 @@ namespace Qck\Interfaces;
  */
 interface Property
 {
-
   /**
    * 
-   * @param mixed $Key
+   * @param type $Value1
+   * @param type $Value2
+   * @return int
    */
-  function getName();
-
-  /**
-   * 
-   * @param mixed $Key
-   */
-  function getDefaultValue();
-
-  /**
-   * 
-   * @param mixed $Key
-   */
-  function canBeNull();
-
+  function compare( $Value1, $Value2 );
 }

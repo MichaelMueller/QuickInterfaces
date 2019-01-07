@@ -9,17 +9,11 @@ namespace Qck\Interfaces;
  *  
  * @author muellerm
  */
-interface ObjectLoader
+interface ObjectSaver
 {
-
-  const ASC  = 0;
-  const DESC = 1;
-
   /**
-   * get objects matching fqcn and properties
+   * save an object (tree!)
    * @param object $Object
-   * @return mixed PersistableObject[] (could be empty) or if $Limit = 1 PersistableObject or null
    */
-  function get( $Fqcn, ScalarProperties $Properties, $Limit = null, $Offset = null,
-                Property $OrderByProperty = null, $Order = ObjectDatabase::ASC );
+  function save( $Object );
 }

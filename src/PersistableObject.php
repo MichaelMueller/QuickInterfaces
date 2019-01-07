@@ -11,10 +11,7 @@ interface PersistableObject
 {
 
   /**
-   * 
-   * @param mixed $Key
+   * @return ObjectSchema
    */
-  function get( $Key );
-
-  function set( $Key, $Value );
+  function getSchema();
 }
