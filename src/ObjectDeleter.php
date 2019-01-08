@@ -14,5 +14,11 @@ interface ObjectDeleter
    * delete objects matching the properties. all referenced objects will also be deleted
    * @param object $Object
    */
-  function delete( $Fqcn, ScalarProperties $Properties );
+  function deleteMany( $Fqcn, ScalarProperties $Properties );
+
+  /**
+   * delete objects matching the properties. all referenced objects will also be deleted
+   * @param object $Object
+   */
+  function delete( $Object );
 }

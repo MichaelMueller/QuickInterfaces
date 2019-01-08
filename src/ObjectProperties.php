@@ -6,12 +6,12 @@ namespace Qck\Interfaces;
  * Service class for sending messages to an admin
  * @author muellerm
  */
-interface ScalarProperties
+interface ObjectProperties
 {
   /**
    * 
    * @param object $Object
-   * @return 
+   * @return bool
    */
   function matches($Object);
 }

@@ -3,18 +3,27 @@
 namespace Qck\Interfaces;
 
 /**
- *
- * Basic and simple interface for a DataNode
+ * Basic and simple interface for a DataObject using ActiveRecord pattern
+ * 
  * @author muellerm
  */
-interface PersistableObject
+interface DataObject
 {
+  /**
+   * 
+   * @return DataObjectSchema
+   */
+  function getSchema();
 
   /**
    * 
-   * @param mixed $Key
+   * @return ActiveRecord
    */
-  function get( $Key );
+  function getActiveRecord();
 
-  function set( $Key, $Value );
+  /**
+   * 
+   * @param \Qck\Interfaces\ActiveRecord $ActiveRecord
+   */
+  function setActiveRecord( ActiveRecord $ActiveRecord );
 }

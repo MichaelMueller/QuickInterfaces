@@ -3,9 +3,7 @@
 namespace Qck\Interfaces;
 
 /**
- * A generic interface to load, delete or save objects of any class from or to a persistent memory.
- * Implementing classes must have access to some kind of schema object to be able to do the job.
- * The Properties interface is a interface to filter arrays or objects, respectively dictionaries.
+ * An interface for retrieving associated File objects to arbitrary objects
  *  
  * @author muellerm
  */
@@ -14,8 +12,15 @@ interface ObjectFileRegistry
 
   /**
    * 
+   * @param type $Object
+   * @param \Qck\Interfaces\File $File
+   */
+  function setFile( $Object, File $File );
+
+  /**
+   * returns or creates a File Object for the object
    * @param File
    * @return File Description
    */
-  function getFile( $Object, $Extension );
+  function getFile( $Object );
 }
