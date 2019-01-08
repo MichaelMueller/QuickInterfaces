@@ -7,7 +7,7 @@ namespace Qck\Interfaces;
  *  An interface for deleting objects which are not in memory.
  *  @author muellerm
  */
-interface ObjectDeleter
+interface ObjectDatabase
 {
 
   /**
