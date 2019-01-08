@@ -6,13 +6,13 @@ namespace Qck\Interfaces;
  * A central interface for addressing objects using an id
  * @author muellerm
  */
-interface ObjectIdRegistry extends ObjectIdProvider
+interface ObjectIdProvider
 {
 
   /**
-   * sets an object
+   * 
    * @param mixed $Id
    * @return object An object or null
    */
-  function setObjectId( $Object, $Id = null );
+  function getObjectId( $Object );
 }

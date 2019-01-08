@@ -1,12 +1,12 @@
 <?php
 
-namespace Qck\Interfaces;
+namespace Qck\Interfaces\GraphSerialization;
 
 /**
  * A central interface for addressing objects using an id
  * @author muellerm
  */
-interface ObjectIdRegistry extends ObjectIdProvider
+interface IdRegistry extends ObjectIdProvider
 {
 
   /**
