@@ -1,6 +1,6 @@
 <?php
 
-namespace Qck\Interfaces\ObjectSerialization;
+namespace Qck\Interfaces\Serialization;
 
 /**
  * An interface for conversion of objects to an array of scalar. Implementing classes must "know" these
@@ -17,10 +17,11 @@ interface DataFileProvider
    * @param string $FileExtension
    * @return \Qck\Interfaces\File
    */
-  function getFile( $Id, $FileExtension );
+  function getFile( $Id );
 
   /**
-   * @return File[]
+   * 
+   * @return \Qck\Interfaces\Serializer
    */
-  function getAllFiles( $FileExtension );
+  function getSerializer();
 }

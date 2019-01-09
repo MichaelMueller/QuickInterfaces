@@ -57,9 +57,14 @@ interface File
    * @param string $data
    */
   function writeContents( $data );
-  
+
   /**
    * @return bool
    */
   function exists();
+
+  /**
+   * @return void
+   */
+  function deleteIfExists();
 }
