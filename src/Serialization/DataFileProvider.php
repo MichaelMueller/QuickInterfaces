@@ -21,7 +21,7 @@ interface DataFileProvider
 
   /**
    * 
-   * @return \Qck\Interfaces\Serializer
+   * @return \Qck\Interfaces\ArraySerializer
    */
-  function getSerializer();
+  function getArraySerializer();
 }

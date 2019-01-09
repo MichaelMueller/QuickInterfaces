@@ -12,5 +12,5 @@ interface FileObjectStorageFactory
   /**
    * @return ObjectStorage
    */
-  function createFileObjectStorage( $Id, File $File, Serializer $Serializer, ObjectDatabase $ObjectDatabase );
+  function createFileObjectStorage( $Id, File $File, ArraySerializer $Serializer, ObjectDatabase $ObjectDatabase );
 }

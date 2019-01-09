@@ -3,10 +3,10 @@
 namespace Qck\Interfaces;
 
 /**
- * array of scalars (! no complex hierarchies) serializer
+ * array of scalars (! no complex hierarchies) ArraySerializer
  * @author muellerm
  */
-interface Serializer
+interface ArraySerializer
 {
 
   /**

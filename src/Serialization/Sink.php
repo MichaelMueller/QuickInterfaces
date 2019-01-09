@@ -7,7 +7,7 @@ namespace Qck\Interfaces\Serialization;
  * 
  * @author muellerm
  */
-interface Sink extends IdProvider
+interface Sink
 {
 
   /**

@@ -67,4 +67,9 @@ interface File
    * @return void
    */
   function deleteIfExists();
+
+  /**
+   * @return void
+   */
+  function touch();
 }
