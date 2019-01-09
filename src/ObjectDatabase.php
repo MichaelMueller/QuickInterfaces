@@ -4,23 +4,25 @@ namespace Qck\Interfaces;
 
 /**
  *
- *  An interface for deleting objects which are not in memory.
+ *  An interface for storing and loading objects which are not in memory.
  *  @author muellerm
  */
 interface ObjectDatabase
 {
 
-  /**
-   * delete objects matching the properties. all referenced objects will also be deleted
-   * @param object $Object
-   */
-  function deleteMatching( $Fqcn, ScalarProperties $Properties );
+  function loadObjects( $Fqcn, Matcher $Matcher );
+
+  function saveObject( $Object );
 
   /**
    * delete objects matching the properties. all referenced objects will also be deleted
    * @param object $Object
    */
-  function delete( $Object );
+  function deleteObjects( $Fqcn, Matcher $Matcher );
 
-  function save( $Object );
+  /**
+   * delete objects matching the properties. all referenced objects will also be deleted
+   * @param object $Object
+   */
+  function deleteObject( $Object );
 }

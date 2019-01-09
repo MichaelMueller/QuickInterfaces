@@ -7,18 +7,12 @@ namespace Qck\Interfaces;
  *  An interface for deleting objects which are not in memory.
  *  @author muellerm
  */
-interface ObjectDatabase
+interface ObjectMatcher
 {
 
   /**
    * delete objects matching the properties. all referenced objects will also be deleted
    * @param object $Object
    */
-  function deleteMany( $Fqcn, ScalarProperties $Properties );
-
-  /**
-   * delete objects matching the properties. all referenced objects will also be deleted
-   * @param object $Object
-   */
-  function delete( $Object );
+  function matches( $Object );
 }

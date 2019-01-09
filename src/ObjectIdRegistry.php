@@ -6,7 +6,7 @@ namespace Qck\Interfaces;
  * A central interface for addressing objects using an id
  * @author muellerm
  */
-interface ObjectIdRegistry extends ObjectIdProvider
+interface ObjectIdRegistry extends IdProvider
 {
 
   /**
