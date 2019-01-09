@@ -1,6 +1,6 @@
 <?php
 
-namespace Qck\Interfaces\Serialization;
+namespace Qck\Interfaces;
 
 /**
  * An interface for conversion of objects to an array of scalar. Implementing classes must "know" these
@@ -8,27 +8,21 @@ namespace Qck\Interfaces\Serialization;
  *  
  * @author muellerm
  */
-interface Serializable
+interface ObjectArrayMapper
 {
 
   /**
    * 
    * @param \Qck\Interfaces\Data\ObjectIdProvider $ObjectIdProvider
-   * @return array of scalars!
+   * @return array an array of scalars 
    */
-  function toScalarArray( ObjectIdProvider $ObjectIdProvider );
+  function toArray( $Object, ObjectIdProvider $ObjectIdProvider );
 
   /**
    * 
    * @param array $ScalarArray
    * @param \Qck\Interfaces\Serialization\Source $Source
    */
-  function fromScalarArray( array $ScalarArray, Source $Source, $Reload = false );
+  function fromArray( $Object, array $ScalarArray, ObjectSource $Source, $Reload = false );
 
-  /**
-   * 
-   * @param object $Object
-   * @return Serializable[]
-   */
-  function getOwnedObjects();
 }

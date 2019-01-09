@@ -1,13 +1,13 @@
 <?php
 
-namespace Qck\Interfaces\Serialization;
+namespace Qck\Interfaces;
 
 /**
- * An importer for objects from a source
+ * Abstraction for a Source of arbitrary Objects based on Ids
  * 
  * @author muellerm
  */
-interface Source
+interface ObjectSource
 {
 
   /**
