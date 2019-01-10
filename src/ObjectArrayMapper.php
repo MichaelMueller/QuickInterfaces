@@ -3,7 +3,7 @@
 namespace Qck\Interfaces;
 
 /**
- * An interface for conversion of objects to an array of scalar. Implementing classes must "know" these
+ * An interface for conversion of objects to an array of scalars. Implementing classes must "know" these
  * classes.
  *  
  * @author muellerm

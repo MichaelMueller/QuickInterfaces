@@ -8,6 +8,7 @@ namespace Qck\Interfaces;
  */
 interface Property
 {
+
   /**
    * 
    * @param object $Object
@@ -22,15 +23,21 @@ interface Property
    * @param object $Object
    * @param \Qck\Interfaces\ObjectIdProvider $ObjectIdProvider
    */
-  function toScalar( $Object, \Qck\Interfaces\ObjectIdProvider $ObjectIdProvider );
-  
+  function getScalar( $Object, \Qck\Interfaces\ObjectIdProvider $ObjectIdProvider );
+
   /**
    * 
    * @param mixed $Object
    * @return mixed
    */
-  function getValue($Object);
-  
+  function getValue( $Object );
+
+  /**
+   * 
+   * @param type $Value
+   */
+  function setValue( $Object, $Value );
+
   /**
    * @return bool
    */
