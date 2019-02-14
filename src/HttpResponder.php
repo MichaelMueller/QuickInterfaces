@@ -10,6 +10,7 @@ interface HttpResponder
 {
 
   const EXIT_CODE_OK              = 200;
+  const EXIT_CODE_BAD_REQUEST     = 400;
   const EXIT_CODE_UNAUTHORIZED    = 401;
   const EXIT_CODE_NOT_FOUND       = 404;
   const EXIT_CODE_INTERNAL_ERROR  = 500;
