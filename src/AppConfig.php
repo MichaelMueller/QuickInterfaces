@@ -10,49 +10,13 @@ namespace Qck\Interfaces;
 interface AppConfig
 {
 
-  /**
-   * @return string the name identifying this web app
-   */
-  function getAppName();
+    /**
+     * @return Inputs
+     */
+    function getInputs();
 
-  /**
-   * @return Router
-   */
-  function getRouter();
-
-  /**
-   * @return Mail\AdminMailer
-   */
-  function getAdminMailer();
-
-  /**
-   * @return ErrorController
-   */
-  function getErrorController();
-
-  /**
-   * @return \Qck\Inputs
-   */
-  function getInputs();
-
-  /**
-   * @return bool
-   */
-  function wasInvokedFromCli();
-
-  /**
-   * @return DirectoryConfig
-   */
-  function showErrors();
-
-  /**
-   * @return DirectoryConfig
-   */
-  function getDirectoryConfig();
-
-  /**
-   * 
-   * @param \Qck\Interfaces\DirectoryConfig $DirectoryConfig
-   */
-  function setDirectoryConfig( DirectoryConfig $DirectoryConfig );
+    /**
+     * @return CliDetector
+     */
+    function getCliDetector();
 }
