@@ -5,4 +5,5 @@ git add -A && git commit -am"${commitMsg}"
 git pull
 git push
 
+echo "waiting 15 seconds"
 sleep 15s
