@@ -11,19 +11,18 @@ interface Session
 {
 
   /**
-   * start session and return a username if set
-   * @return string or null if none is set
+   * @return User or null
    */
-  function getUsername();
+  function getCurrentUser();
 
   /**
    * start session and set a username if set
    * @return string or null if none is set
    */
-  function setUsername($Username);
+  function setCurrentUser(User $User);
 
   /**
    * completely clear session
    */
-  function destroySession();
+  function logout();
 }

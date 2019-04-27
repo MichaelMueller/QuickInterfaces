@@ -29,5 +29,5 @@ interface Inputs
    * 
    * @return array
    */
-  public function getParams();
+  public function getData();
 }
