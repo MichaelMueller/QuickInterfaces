@@ -10,8 +10,8 @@ namespace Qck\Interfaces;
 interface UserDb
 {
 
-  /**
-   * @return User
-   */
-  function getUser( $UserName );
+    /**
+     * @return User
+     */
+    function getUser( $UserName );
 }

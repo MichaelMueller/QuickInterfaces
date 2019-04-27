@@ -10,19 +10,19 @@ namespace Qck\Interfaces;
 interface Session
 {
 
-  /**
-   * @return User or null
-   */
-  function getCurrentUser();
+    /**
+     * start session and set a username if set
+     * @return string or null if none is set
+     */
+    function startSession( $Username );
 
-  /**
-   * start session and set a username if set
-   * @return string or null if none is set
-   */
-  function setCurrentUser(User $User);
+    /**
+     * @return string or null
+     */
+    function getUserName();
 
-  /**
-   * completely clear session
-   */
-  function logout();
+    /**
+     * completely clear session
+     */
+    function stopSession();
 }
