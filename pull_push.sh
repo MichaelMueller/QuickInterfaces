@@ -5,4 +5,4 @@ git add -A && git commit -am"${commitMsg}"
 git pull
 git push
 
-sleep 5s
+sleep 15s
