@@ -19,7 +19,7 @@ interface Session
     /**
      * @return string or null
      */
-    function getUserName();
+    function getUsername();
 
     /**
      * completely clear session

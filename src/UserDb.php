@@ -13,5 +13,5 @@ interface UserDb
     /**
      * @return User
      */
-    function getUser( $UserName );
+    function getUser( $Username );
 }

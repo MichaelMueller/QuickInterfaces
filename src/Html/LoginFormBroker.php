@@ -13,5 +13,5 @@ interface LoginFormBroker
   /**
    * @return \Qck\Interfaces\Template
    */
-  function getLoginForm( $Action, $UserNameElement, $PasswordElement, $Title, $Logo );
+  function getLoginForm( $Action, $UsernameElement, $PasswordElement, $Title, $Logo );
 }
