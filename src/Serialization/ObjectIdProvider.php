@@ -12,5 +12,5 @@ interface ObjectIdProvider
   /**
    * @return mixed An Id for this object
    */
-  function getId( Serializable $Object );
+  function getId( $Object );
 }

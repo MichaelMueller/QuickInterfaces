@@ -13,7 +13,7 @@ interface Test
  * @param \Qck\Interfaces\FileSystem $FileSystem
  * @param \Qck\Interfaces\Cleaner $Cleaner
  */
-  function exec( FileSystem $FileSystem, Cleaner $Cleaner );
+  function run( FileSystem $FileSystem, Cleaner $Cleaner );
 
   /**
    * @return string[] A set of test Fqcns that must be run before
