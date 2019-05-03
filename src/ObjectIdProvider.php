@@ -8,11 +8,18 @@ namespace Qck\Interfaces;
  */
 interface ObjectIdProvider
 {
-  
-  /**
-   * garantuees to generate a unique (!) id for this object
-   * 
-   * @return mixed An Id for this object
-   */
-  function getId( $Object );
+
+    /**
+     * garantuees to generate a unique (!) id for this object
+     * 
+     * @return mixed An Id for this object
+     */
+    function getId( $Object );
+
+    /**
+     * garantuees to generate a unique (!) id for this object
+     * 
+     * @return mixed An Id for this object
+     */
+    function getIds( array $Objects );
 }

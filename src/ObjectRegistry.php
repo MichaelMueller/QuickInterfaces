@@ -11,13 +11,13 @@ interface ObjectRegistry extends ObjectIdProvider
 
   /**
    * 
-   * @param type $Id
-   * @param \Qck\Interfaces\Serialization\Serializable $Object
+   * @param mixed $Id
+   * @param object $Object
    */
   function setObject( $Id, $Object );
 
   /**
-   * @return Serializable An object or null
+   * @return object An object or null
    */
   function getObject( $Id );
 }

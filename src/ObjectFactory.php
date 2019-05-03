@@ -9,11 +9,19 @@ namespace Qck\Interfaces;
 interface ObjectFactory
 {
 
-  /**
-   * creates a new object
-   * @param type $Id
-   * @param \Qck\Interfaces\Serialization\Serializable $Object
-   */
-  function create( $Fqcn );
+    /**
+     * creates a new object
+     * 
+     * @param string $Fqcn
+     * @param array $Data
+     */
+    function create( $Fqcn, array $Args = [] );
 
+    /**
+     * creates a new object
+     * 
+     * @param string $Fqcn
+     * @param array $Data
+     */
+    function createArgs( $Fqcn, ...$Args );
 }

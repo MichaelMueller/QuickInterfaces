@@ -9,8 +9,8 @@ namespace Qck\Interfaces;
  */
 interface ObjectSource
 {
-
-  /**
+ 
+ /**
    * 
    * @param mixed $Id an id
    * @param bool $Reload
