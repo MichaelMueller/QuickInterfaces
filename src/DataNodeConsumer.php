@@ -6,11 +6,11 @@ namespace Qck\Interfaces;
  * interface for classes providing an ActiveRecord
  * @author muellerm
  */
-interface ActiveRecordConsumer
+interface DataNodeConsumer extends DataNodeProvider
 {
 
     /**
-     * @return ActiveRecord
+     * @return DataNode
      */
-    function setActiveRecord( ActiveRecord $ActiveRecord );
+    function setDataNode( DataNode $ActiveRecord );
 }

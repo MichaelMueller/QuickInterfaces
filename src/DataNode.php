@@ -6,13 +6,8 @@ namespace Qck\Interfaces;
  * Service class for sending messages to an admin
  * @author muellerm
  */
-interface ActiveRecord
+interface DataNode
 {
-
-    /**
-     * @return mixed An Id for this record or null if no Id provided yet!
-     */
-    function getId();
 
     /**
      * 
@@ -35,20 +30,25 @@ interface ActiveRecord
     function set( $Key, $Value );
 
     /**
-     * 
-     * @param mixed $Key
-     * @param mixed $Default
-     * @return mixed A value or $Default
-     */
-    function get( $Key, $Default = null );
-
-    /**
      * @param mixed $Key
      */
     function remove( $Key );
 
     /**
-     * @return data array 
+     * 
+     * @param mixed $Key
+     * @param mixed $Default
+     * @return callable A function for creating a default or $Default
+     */
+    function get( $Key, callable $Default = null );
+
+    /**
+     * @return mixed An Id for this record or null if no Id provided yet!
+     */
+    function getId();
+
+    /**
+     * @return mixed An Id for this record or null if no Id provided yet!
      */
     function getData();
 
@@ -58,17 +58,12 @@ interface ActiveRecord
     function keys();
 
     /**
-     * @return array an array of values
-     */
-    function values();
-
-    /**
      * @return bool
      */
     function has( $Key );
 
     /**
-     * @return ActiveRecord a new ActiveRecord
+     * @return DataNode a new DataNode
      */
     function create( $Id = null );
 
