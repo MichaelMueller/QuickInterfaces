@@ -7,7 +7,7 @@ namespace Qck\Interfaces\Html;
  * 
  * @author muellerm
  */
-interface Snippet
+interface HtmlSnippet
 {
 
   function renderHtml();
