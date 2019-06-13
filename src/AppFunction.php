@@ -10,5 +10,5 @@ namespace Qck\Interfaces;
 interface AppFunction
 {
 
-    function run( Inputs $Inputs );
+    function run( App $App );
 }
