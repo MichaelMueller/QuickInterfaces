@@ -9,14 +9,15 @@ namespace Qck\Interfaces;
 interface HttpResponder
 {
 
-    const EXIT_CODE_OK                   = 200;
-    const EXIT_CODE_BAD_REQUEST          = 400;
-    const EXIT_CODE_UNAUTHORIZED         = 401;
-    const EXIT_CODE_NOT_FOUND            = 404;
+    const EXIT_CODE_OK = 200;
+    const EXIT_CODE_BAD_REQUEST = 400;
+    const EXIT_CODE_UNAUTHORIZED = 401;
+    const EXIT_CODE_NOT_FOUND = 404;
     const EXIT_CODE_UNPROCESSABLE_ENTITY = 422;
-    const EXIT_CODE_INTERNAL_ERROR  = 500;
+    const EXIT_CODE_INTERNAL_ERROR = 500;
     const EXIT_CODE_NOT_IMPLEMENTED = 501;
-    const EXIT_CODE_REDIRECT_FOUND  = 302;
+    const EXIT_CODE_MOVED_PERMANENTLY = 301;
+    const EXIT_CODE_REDIRECT_FOUND = 302;
 
     /**
      * 
@@ -28,7 +29,7 @@ interface HttpResponder
 
     /**
      * 
-     * @param type $Url
+     * @param string $Url
      */
-    function redirect( $Url );
+    function redirect( $Url, $ExitCode = HttpResponder::EXIT_CODE_REDIRECT_FOUND );
 }

@@ -24,19 +24,19 @@ interface FileSystem
   /**
    * 
    * @param string $Dir
-   * @param \Qck\Interfaces\FileFactory $FileFactory
+   * @param \Qck\Interfaces\PathFactory $PathFactory
    * @param int $Mode: 0 means files and folders, 1=only files, 2=only dirs
    * @param bool $Recursive
    * @param mixed $Extensions array or string or null of file extensions without dot. has no effect if mode is 2
    * @param int $MaxFiles if not null, the function will stop after finding $MaxFiles
-   * @return File[] File array
+   * @return Path[] Path array
    */
   function getFiles( $Dir, $Mode = FileSystem ::FILES_AND_DIRECTORIES, $Recursive = true, $Extensions = null, $MaxFiles = null );
 
   /**
-   * @return FileFactory
+   * @return PathFactory
    */
-  function getFileFactory();
+  function getPathFactory();
 
   /**
    * Get the size of a folder and all containing files (recursively)
@@ -56,7 +56,7 @@ interface FileSystem
    * @param string $NamePrefix
    * @param string $Ext
    * @param string $Dir if null the sys temp dir will be used. If $Dir does not exist it will be created
-   * @return File
+   * @return Path
    */
   function createRandomFile( $NamePrefix = null, $Ext = null, $Dir = null );
 
@@ -65,7 +65,7 @@ interface FileSystem
    * @param string $Name
    * @param string $Dir if null the current working dir will be used. If $Dir does not exist it will be created
    * @param bool $DeleteIfExists whether to delete the file if it exists and create it afterwards
-   * @return File
+   * @return Path
    */
   function createFile( $Name, $Dir = null, $DeleteIfExists = false );
 

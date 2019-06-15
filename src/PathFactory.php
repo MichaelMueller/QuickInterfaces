@@ -6,21 +6,21 @@ namespace Qck\Interfaces;
  * Interface for creating a file object
  * @author muellerm
  */
-interface FileFactory
+interface PathFactory
 {
 
   /**
    * 
    * @param string $DirPath
    * @param string $FileBaseName
-   * @return File A File Object
+   * @return Path A File Object
    */
-  function createFileObject($DirPath, $FileBaseName);
+  function createPath($DirPath, $FileBaseName);
 
   /**
    * 
    * @param string $FilePath
-   * @return File A File Object
+   * @return Path A File Object
    */
-  function createFileObjectFromPath($FilePath);
+  function createPathFromPath($FilePath);
 }

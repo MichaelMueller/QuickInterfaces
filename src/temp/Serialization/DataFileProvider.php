@@ -15,7 +15,7 @@ interface DataFileProvider
    * 
    * @param mixed $Id
    * @param string $FileExtension
-   * @return \Qck\Interfaces\File
+   * @return \Qck\Interfaces\Path
    */
   function getFile( $Id );
 

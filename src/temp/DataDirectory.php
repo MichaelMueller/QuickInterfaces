@@ -13,7 +13,7 @@ interface DataDirectory
   /**
    * 
    * @param mixed $Id
-   * @return \Qck\Interfaces\File
+   * @return \Qck\Interfaces\Path
    */
   function getFile( $Id );
 }

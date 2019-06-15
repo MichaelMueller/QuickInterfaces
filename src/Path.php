@@ -6,7 +6,7 @@ namespace Qck\Interfaces;
  * Interface for a file object
  * @author muellerm
  */
-interface File
+interface Path
 {
 
   /**
