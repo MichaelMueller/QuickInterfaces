@@ -12,24 +12,35 @@ interface DataRegistry
 
     /**
      * 
-     * @param string $PartialKey
+     * @param string $SpaceName
      * @return Registry
      */
-    function getSpace( $PartialKey );
+    function space( $SpaceName );
 
     /**
      * 
      * @param array $Data
-     * @param string $KeyAttrName
+     * @param string $IdAttrName
      */
-    function save( array $Data, $KeyAttrName = "id" );
+    function save( array $Data, $IdAttrName = "id" );
 
     /**
      * 
-     * @param mixed $Key
+     * @param mixed $Id
      * @return array|null
      */
-    function get( $Key );
+    function get( $Id );
+
+    /**
+     * 
+     * @param mixed $Id
+     */
+    function delete( $Id );
+
+    /**
+     * 
+     */
+    function clear();
 
     /**
      * 
