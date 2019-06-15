@@ -9,18 +9,26 @@ namespace Qck\Interfaces;
 interface PathFactory
 {
 
-  /**
-   * 
-   * @param string $DirPath
-   * @param string $FileBaseName
-   * @return Path A File Object
-   */
-  function createPath($DirPath, $FileBaseName);
+    /**
+     * 
+     * @param string $DirPath
+     * @param string $FileBaseName
+     * @return Path A File Object
+     */
+    function buildPath( $DirPath, $FileBaseName );
 
-  /**
-   * 
-   * @param string $FilePath
-   * @return Path A File Object
-   */
-  function createPathFromPath($FilePath);
+    /**
+     * 
+     * @param string $DirPath
+     * @param string $FileBaseName
+     * @return Path A File Object
+     */
+    function buildMultiPath( $FileBaseName, ... $DirParts );
+
+    /**
+     * 
+     * @param string $FilePath
+     * @return Path A File Object
+     */
+    function createPath( $FilePath );
 }
