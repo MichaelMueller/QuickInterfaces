@@ -3,14 +3,20 @@
 namespace Qck\Interfaces;
 
 /**
- * Interface for an App Config. In its basic form it only provides an Inputs interface
+ * An Config Service Class
  * 
  * @author muellerm
  */
-interface App
+interface AppConfig
 {
+
     /**
      * @return Inputs
      */
     function getInputs();
+
+    /**
+     * @return CliDetector
+     */
+    function getCliDetector();
 }

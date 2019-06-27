@@ -9,8 +9,8 @@ namespace Qck\Interfaces;
 interface Functor
 {
 
-  /**
-   * @return void
-   */
-  public function run();
+    /**
+     * @return void
+     */
+    public function __invoke();
 }

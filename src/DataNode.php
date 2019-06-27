@@ -3,35 +3,40 @@
 namespace Qck\Interfaces;
 
 /**
- *
- * Basic and simple interface for a DataNode
+ * An interface for an object that can be rendered to HTML
+ * 
  * @author muellerm
  */
-interface DataNode
+interface DataNode extends Node
 {
 
-  /**
-   * @return string
-   */
-  function getUuid();
+    /**
+     * @param string $Key
+     * @return void
+     */
+    function set( $Key, $Value );
+ 
+    /**
+     * @param string $Key
+     * @return mixed
+     */
+    function get( $Key );
 
-  /**
-   * @return void
-   */
-  function getData();
+    /**
+     * @param string $Key
+     * @return bool
+     */
+    function has( $Key );
 
-  /**
-   * @return array
-   */
-  function setData( array $Data );
+    /**
+     * 
+     * @return string[]
+     */
+    function keys();
 
-  /**
-   * @return array
-   */
-  function hasChanged();
-
-  /**
-   * @return array
-   */
-  function setUnchanged();
+    /**
+     * @param string $Key
+     * @return void
+     */
+    function remove( $Key );
 }
